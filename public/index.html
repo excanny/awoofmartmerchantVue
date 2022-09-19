@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <base href="/">
+     
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="ast/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="ast/css/jquery-ui.css">
+    <link rel="stylesheet" href="ast/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="ast/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="ast/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="ast/css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="ast/css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="ast/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="ast/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="ast/css/aos.css">
+
+    <link rel="stylesheet" href="ast/css/style.css">
+
+    <link href="/assets/assets2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- <link href="assets2/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+  <link href="/assets2/css/ruang-admin.min.css" rel="stylesheet" type="text/css">
+  <link href="assets2/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link href="assets2/css/mycss.css" rel="stylesheet">
+    <style>
+
+
+      .signup-error{color:#FF0000; padding-left:15px;}
+      
+      html {
+          height: 100%
+      }
+      
+      
+      .card {
+          z-index: 0;
+          border: none;
+          position: relative
+      }
+      
+      .fs-title {
+          font-size: 25px;
+          color: green;
+          margin-bottom: 15px;
+          font-weight: normal;
+          text-align: left
+      }
+      
+      .purple-text {
+          color: #7AAC41;
+          font-weight: normal
+      }
+      
+      .steps {
+          font-size: 25px;
+          color: gray;
+          margin-bottom: 10px;
+          font-weight: normal;
+          text-align: right
+      }
+      
+      .fieldlabels {
+          color: gray;
+          text-align: left
+      }
+      
+      #progressbar {
+          margin-bottom: 17px;
+          overflow: hidden;
+          color: lightgrey
+      }
+      
+      #progressbar .active {
+          color: #7AAC41
+      }
+      
+      #progressbar li {
+          list-style-type: none;
+          font-size: 15px;
+          width: 25%;
+          float: left;
+          position: relative;
+          font-weight: 400
+      }
+      
+      #progressbar #personal:before {
+          font-family: FontAwesome;
+          content: "\f13e"
+      }
+      
+      #progressbar #business:before {
+          font-family: FontAwesome;
+          content: "\f0d6"
+      }
+      
+      #progressbar #bank:before {
+          font-family: FontAwesome;
+          content: "\f19c"
+      }
+      
+      #progressbar #general:before {
+          font-family: FontAwesome;
+          content: "\f00c"
+      }
+      
+      #progressbar li:before {
+          width: 50px;
+          height: 50px;
+          line-height: 45px;
+          display: block;
+          font-size: 20px;
+          color: #ffffff;
+          background: lightgray;
+          border-radius: 50%;
+          margin: 0 auto 10px auto;
+          padding: 2px
+      }
+      
+      #progressbar li:after {
+          content: '';
+          width: 100%;
+          height: 2px;
+          background: lightgray;
+          position: absolute;
+          left: 0;
+          top: 25px;
+          z-index: -1
+      }
+      
+      #progressbar li.active:before,
+      #progressbar li.active:after {
+          background: #7AAC41
+      }
+      
+      
+      .fit-image {
+          width: 100%;
+          object-fit: cover
+      }
+      
+      
+      
+      
+      
+      </style>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+
+    <script src="ast/js/jquery-3.3.1.min.js"></script>
+    <script src="ast/js/jquery-ui.js"></script>
+    <script src="ast/js/popper.min.js"></script>
+    <script src="ast/js/bootstrap.min.js"></script>
+    <script src="ast/js/owl.carousel.min.js"></script>
+    <script src="ast/js/jquery.countdown.min.js"></script>
+    <script src="ast/js/jquery.easing.1.3.js"></script>
+    <script src="ast/js/aos.js"></script>
+    <script src="ast/js/jquery.fancybox.min.js"></script>
+    <script src="ast/js/jquery.sticky.js"></script>
+    <script src="ast/js/isotope.pkgd.min.js"></script>
+    <script src="ast/js/dobpicker.js"></script>
+
+    <script src="ast/js/main.js"></script>
+
+    <!-- <script src="assets2/vendor/jquery/jquery.min.js"></script>
+    <script src="assets2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+    <script src="assets2/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="assets2/js/ruang-admin.min.js"></script>
+    <script src="assets2/vendor/chart.js/Chart.min.js"></script>
+    <script src="assets2/js/demo/chart-area-demo.js"></script> 
+    <!-- Datatable JS -->
+    <script src="assets2/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets2/vendor/datatables/dataTables.bootstrap4.min.js"></script> 
+
+
+    <script>
+
+      function validate() {
+      var output = true;
+      $(".signup-error").html('');
+      if($("#personal-field").css('display') != 'none') {
+        if(!($("#firstname").val())) {
+          output = false;
+          $("#firstname-error").html("First Name required!");
+        }
+        if(!($("#lastname").val())) {
+          output = false;
+          $("#lastname-error").html("Last Name required!");
+        }
+        if(!($("#email").val())) {
+          output = false;
+          $("#email-error").html("Email required!");
+        }	
+        if(!$("#email").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+          $("#email-error").html("Invalid Email!");
+          output = false;
+        }
+        if(!($("#phone").val())) {
+          output = false;
+          $("#phone-error").html("Phone required!");
+        }
+        if(!($("#dobday").val())) {
+          output = false;
+          $("#ddob-error").html("Day required!");
+        }
+        if(!($("#dobmonth").val())) {
+          output = false;
+          $("#mdob-error").html("Month required!");
+        }
+      
+        if(!($("#dobyear").val())) {
+          output = false;
+          $("#ydob-error").html("Year required!");
+        }
+      
+        if(!($("#user-password").val())) {
+          output = false;
+          $("#password-error").html("Password required!");
+        }	
+        if(!($("#confirm-password").val())) {
+          output = false;
+          $("#confirm-password-error").html("Confirm password required!");
+        }	
+        if($("#user-password").val() != $("#confirm-password").val()) {
+          output = false;
+          $("#confirm-password-error").html("Password not matched!");
+        }	
+        
+      }
+      
+      if($("#business-field").css('display') != 'none') {
+      
+        if(!($("#shopname").val())) {
+          output = false;
+          $("#shopname-error").html("Shop Name required!");
+        }	
+        if(!($("#cityname").val())) {
+          output = false;
+          $("#cityname-error").html("City required!");
+        }
+        if(!($("#areaname").val())) {
+          output = false;
+          $("#areaname-error").html("Area required!");
+        }
+        if(!($("#landmark").val())) {
+          output = false;
+          $("#landmark-error").html("Landmark required!");
+        }
+        if(!($("#shopaddress").val())) {
+          output = false;
+          $("#shopaddress-error").html("Shop Address required!");
+        }
+          
+      }
+      
+      if($("#bank-field").css('display') != 'none'){
+        if(!($("#bankname").val())) {
+          output = false;
+          $("#bankname-error").html("Bank Name required!");
+        }
+        if(!($("#accountno").val())) {
+          output = false;
+          $("#accountno-error").html("Account Number required!");
+        }
+        if(!($("#accountname").val())) {
+          output = false;
+          $("#accountname-error").html("Account Name required!");
+          }
+          if(!($("input[type='checkbox']").is(":checked"))) {
+          output = false;
+          $("#agreement-error").html("Agreement is required!");
+        }	
+      }
+      
+      
+      
+      return output;
+      }
+      
+      
+      $(document).ready(function() {
+      
+        $("#next").click(function(){
+          // var output = validate();
+          // if(output) {
+          //   var current = $(".active");
+          //   var next = $(".active").next("li");
+          //   if(next.length>0) {
+          //     $("#"+current.attr("id")+"-field").hide();
+          //     $("#"+next.attr("id")+"-field").show();
+          //     $("#back").show();
+          //     $("#finish").hide();
+          //     $(".active").removeClass("active");
+          //     next.addClass("active");
+          //     if($(".active").attr("id") == $("li").last().attr("id")) {
+          //       $("#next").hide();
+          //       $("#finish").show();				
+          //     }
+          //   }
+          // }
+  
+          console.log("hi here");
+        });
+      
+        $("#back").click(function(){ 
+          var current = $(".active");
+          var prev = $(".active").prev("li");
+          if(prev.length>0) {
+            $("#"+current.attr("id")+"-field").hide();
+            $("#"+prev.attr("id")+"-field").show();
+            $("#next").show();
+            $("#finish").hide();
+            $(".active").removeClass("active");
+            prev.addClass("active");
+            if($(".active").attr("id") == $("li").first().attr("id")) {
+              $("#back").hide();			
+            }
+          }
+        });
+      
+      });
+      
+      
+      
+      
+        $.dobPicker({
+          daySelector: '#dobday', /* Required */
+          monthSelector: '#dobmonth', /* Required */
+          yearSelector: '#dobyear', /* Required */
+          dayDefault: 'Day', /* Optional */
+          monthDefault: 'Month', /* Optional */
+          yearDefault: 'Year', /* Optional */
+          minimumAge: 18, /* Optional */
+          maximumAge: 80 /* Optional */
+        });
+      
+      
+           //Get Shop Slug ID
+           $("#shopname").bind('input', function () {
+             var stt = $(this).val();
+             str = stt.replace(/\s+/g, '-');
+             $("#shopid").val(str.toLowerCase());
+          });
+      
+      
+           //Dynamic Area Select
+          $('#cityname').change(function(){
+            var cityname = $('#cityname').val();
+            //alert(cityname);
+             if(cityname != '')
+             {
+               //alert("Hi");
+              $.ajax({
+                url:"<?php echo site_url(); ?>index.php/w/GetAllAreas",
+                method:"POST",
+                data:{id:cityname},
+                success:function(data)
+                {
+                  //alert(data);
+                   $('#areaname').html(data);
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                //code to execut
+                //alert(xhr.responseText);
+                //$('#request-result2').html('Error occurred! Try again').delay(4000).fadeOut();
+                },
+                      });
+              
+             }
+            // else
+            // {
+            // 	$('#areaname').html('<option value="">Select Area</option>');
+            // }
+      
+          });
+      
+              //Dynamic Landmark Select
+            $('#areaname').change(function(){
+              var areaname = $('#areaname').val();
+              //alert(areaname);
+            
+             if(areaname != '')
+             {
+               //alert("Hi");
+              $.ajax({
+                url:"<?php echo site_url(); ?>index.php/w/GetAllLandmarks",
+                method:"POST",
+                data:{id:areaname},
+                success:function(data)
+                {
+                  //alert(data);
+                   $('#landmark').html(data);
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                   //code to execute
+                    //alert(xhr.responseText);
+                //$('#request-result2').html('Error occurred! Try again').delay(4000).fadeOut();
+                },
+                      });
+              
+             }
+            // else
+            // {
+            // 	// $('#state').html('<option value="">Select State</option>');
+            // 	// $('#city').html('<option value="">Select City</option>');
+            // }
+          });
+      
+      
+      
+      </script>
+
+
+
+
+  </body>
+</html>
